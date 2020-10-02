@@ -17,7 +17,7 @@ OBJ = $(SRC:.c=.o)
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
-all: $(NAME) $(so)
+all: $(NAME) #$(so)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
@@ -29,9 +29,9 @@ bonus: $(NAME)
 	gcc $(CFLAGS) -c $(SRC) $(SRC_BONUS)
 	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 
-so:
-	gcc -fPIC -Wall -Werror -Wextra -c libft.h $(SRC) $(SRC_BONUS)
-	gcc -shared  -o libft.so $(OBJ) $(OBJ_BONUS)
+#so:
+#	gcc -fPIC -Wall -Werror -Wextra -c libft.h $(SRC) $(SRC_BONUS)
+#	gcc -shared  -o libft.so $(OBJ) $(OBJ_BONUS)
 
 clean:
 	/bin/rm -f $(OBJ) $(OBJ_BONUS)
