@@ -6,7 +6,7 @@
 /*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 17:48:48 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 16:38:18 by robitett         ###   ########.fr       */
+/*   Updated: 2020/10/02 17:54:10 by robitett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	(*new).content = content;
 	(*new).next = NULL;
-	return(new);
+	return (new);
 }

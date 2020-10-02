@@ -6,7 +6,7 @@
 /*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 22:35:09 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 16:25:21 by robitett         ###   ########.fr       */
+/*   Updated: 2020/10/02 17:53:34 by robitett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 	if (tmp)
 		(*tmp).next = new;
 	else
-		*alst = new;	
+		*alst = new;
 }
