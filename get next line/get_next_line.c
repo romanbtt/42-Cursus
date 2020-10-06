@@ -6,7 +6,7 @@
 /*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 14:08:12 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/06 13:52:13 by robitett         ###   ########.fr       */
+/*   Updated: 2020/10/06 14:27:19 by robitett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int		process_line(char **remainder, char **line, int ret)
 	char *temp;
 
 	i = 0;
+	
 	if (ret < 0)
 		return (-1);
 	else if (ret == 0 && *remainder[0] == '\0')
@@ -32,12 +33,14 @@ int		process_line(char **remainder, char **line, int ret)
 			temp = ft_strdup((&(*remainder)[i + 1]));
 			free(*remainder);
 			*remainder = temp;
+			if ((*remainder)[0] == '\0')
+				ft_strdel(remainder);
 			return (1);
 		}
 		else
 		{
 			*line = ft_strdup(*remainder);
-			*remainder[0] = '\0';
+			ft_strdel(remainder);
 			return (0);
 		}	
 	}

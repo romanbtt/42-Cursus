@@ -6,11 +6,20 @@
 /*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:53:36 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/06 02:52:42 by robitett         ###   ########.fr       */
+/*   Updated: 2020/10/06 14:28:15 by robitett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+void	ft_strdel(char **as)
+{
+	if (*as != NULL)
+	{
+		free(*as);
+		*as = NULL;
+	}
+}
 
 void	ft_bzero(void *s, size_t n)
 {
