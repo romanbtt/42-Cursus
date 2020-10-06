@@ -20,7 +20,6 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <unistd.h>
-# include "libft/libft.h"
 
 int		get_next_line(const int fd, char **line);
 void	ft_memdel(void **ap);
