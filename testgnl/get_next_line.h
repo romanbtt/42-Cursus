@@ -23,5 +23,15 @@
 # include "libft/libft.h"
 
 int		get_next_line(const int fd, char **line);
+void	ft_memdel(void **ap);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strcat(char *dst, const char *src);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strnew(size_t size);
+size_t	ft_strlen(const char *str);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_strdel(char **as);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strdup(const char *s1);
 
 #endif
