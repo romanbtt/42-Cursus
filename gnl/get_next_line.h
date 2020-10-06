@@ -12,11 +12,12 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-
+# define OPEN_MAX 2048
 # include <unistd.h>
 # include <limits.h>
 # include <stdlib.h>
 
+int			    get_next_line(int fd, char **line);
 void			ft_strdel(char **s);
 size_t			ft_strlen(const char *s);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
