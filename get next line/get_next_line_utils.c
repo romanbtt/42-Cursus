@@ -6,28 +6,19 @@
 /*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:53:36 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/06 14:28:15 by robitett         ###   ########.fr       */
+/*   Updated: 2020/10/07 00:53:10 by robitett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	ft_strdel(char **as)
+void	ft_strdel(char **s)
 {
-	if (*as != NULL)
-	{
-		free(*as);
-		*as = NULL;
-	}
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	char *ptr;
-
-	ptr = s;
-	while (n--)
-		*ptr++ = '\0';
+	if (s == 0)
+		return ;
+	if (*s)
+		free(*s);
+	*s = 0;
 }
 
 size_t	ft_strlen(const char *s)
@@ -38,20 +29,6 @@ size_t	ft_strlen(const char *s)
 	while (*s++)
 		i++;
 	return (i);
-}
-
-char	*ft_strrchr(const char *s, int c)
-{
-	int len;
-
-	len = ft_strlen(s);
-	while (len >= 0)
-	{
-		if (s[len] == c)
-			return ((char *)s + len);
-		len--;
-	}
-	return (NULL);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -74,7 +51,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	size_t	len;
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	len = ft_strlen(s) + 1;
@@ -88,7 +65,6 @@ char	*ft_strdup(const char *s)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
