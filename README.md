@@ -1,3 +1,9 @@
+<style>
+table {
+    width:100%;
+}
+</style>
+
 <table>
     <tr>
         <td>Project</td>
