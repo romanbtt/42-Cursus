@@ -24,9 +24,9 @@
 </tr>
   
 <tr>
-<td align="center"> Column 1 </td>
-<td align="center"> Column 2 </td>
-<td align="center"> Column 1 </td>
+<td align="center"> <img src="Images/netwhat.png"></td>
+<td align="center"> <img width=40px src="Images/fr.png"> <img width=40px src="Images/us.png"> </td>
+<td align="center"> </td>
 </tr>
 
 </table>
