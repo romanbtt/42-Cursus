@@ -19,7 +19,7 @@
   
 <tr>
 <td align="center"> <img src="Images/libft.png"></td>
-<td align="center"> &#129379 </td>
+<td align="center"> <img src="Images/fr.png"> <img src="Images/fr.png"> </td>
 </tr>
   
 <tr>
