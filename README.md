@@ -29,4 +29,8 @@
 <td align="center"> </td>
 </tr>
 
+<td align="center"> <img src="Images/get_next_line.png"></td>
+<td align="center"> <img width=40px src="Images/fr.png"> <img width=40px src="Images/us.png"> </td>
+<td align="center"> </td>
+
 </table>
