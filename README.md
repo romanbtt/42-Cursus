@@ -18,8 +18,8 @@
 </tr>
   
 <tr>
-<td align="center"> test 2</td>
-<td align="center"> test </td>
+<td align="center"> <img src="Images/libft.png"></td>
+<td align="center"> &#129379 </td>
 </tr>
   
 <tr>
