@@ -1,15 +1,26 @@
 <table>
 <tr>
+  
 <th align="center">
-<img width="441" height="1">
+<img width="294" height="1">
 <p> 
 <small>
 Project
 </small>
 </p>
 </th>
+  
 <th align="center">
-<img width="441" height="1">
+<img width="294" height="1">
+<p> 
+<small>
+Subject
+</small>
+</p>
+</th>
+  
+<th align="center">
+<img width="294" height="1">
 <p> 
 <small>
 Subject
