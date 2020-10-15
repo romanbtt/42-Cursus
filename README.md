@@ -2,17 +2,17 @@
 <tr>
   
 <th align="center">
-<img width="294" height="0.5">
+<img width="294">
 <p>Project</p>
 </th>
   
 <th align="center">
-<img width="294" height="1">
+<img width="294">
 <p>Subject</p>
 </th>
   
 <th align="center">
-<img width="294" height="1">
+<img width="294">
 <p>Score</p>
 </th>
 </tr>
