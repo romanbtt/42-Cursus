@@ -3,29 +3,17 @@
   
 <th align="center">
 <img width="294" height="1">
-<p> 
-<small>
-Project
-</small>
-</p>
+<p> <small>Project</small></p>
 </th>
   
 <th align="center">
 <img width="294" height="1">
-<p> 
-<small>
-Subject
-</small>
-</p>
+<p> <small>Subject</small></p>
 </th>
   
 <th align="center">
 <img width="294" height="1">
-<p> 
-<small>
-Subject
-</small>
-</p>
+<p> <small>Score</small></p>
 </th>
 </tr>
   
