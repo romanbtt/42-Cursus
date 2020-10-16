@@ -31,13 +31,13 @@
   
 <tr>
 <td align="center"> <img src="Images/netwhat.png"></td>
-<td align="center"> <img width=40px src="Images/fr.png"> <img width=40px src="Images/us.png"> </td>
+<td align="center"> <img width=30px src="Images/fr.png"> <img width=30px src="Images/us.png"> </td>
 <td align="center">Netwhat will allow you to discover the network and to understand how it works. This will allow you to understand how some things you already use in your everyday life, without even knowing it. For that you will answer a questionnaire on the website netwhat.42.fr. If you unregister this project, you will need to wait three days before you can retry the subject. </td>
 <td align="center"> </td>
 </tr>
 
 <td align="center"> <img src="Images/get_next_line.png"></td>
-<td align="center"> <img width=40px src="Images/fr.png"> <img width=40px src="Images/us.png"> </td>
+<td align="center"> <img width=30px src="Images/fr.png"> <imgwidth=30px src="Images/us.png"> </td>
 <td align="center">May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects. </td>
 <td align="center"> </td>
 
