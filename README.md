@@ -26,7 +26,7 @@
 <td align="center"> <a href="https://github.com/romanbtt/42_cursus/tree/main/libft"> <img src="Images/libft.png"><a/> </td>
 <td align="center"> <img width=30px src="Images/fr.png"> <img width=30px src="Images/us.png"> </td>
 <td align="center">This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus. </td>
-<td align="center"> <img src="Images/115score.png"> </td>
+<td align="center"> <a href=#><img src="Images/115score.png"> <a/></td>
 </tr>
   
 <tr>
@@ -36,7 +36,7 @@
 <td align="center"> </td>
 </tr>
 
-<td align="center"> <img src="Images/get_next_line.png"></td>
+<td align="center"> <a href=#><img src="Images/get_next_line.png"><a/></td>
 <td align="center"> <img width=30px src="Images/fr.png"> <img width=30px src="Images/us.png"> </td>
 <td align="center">May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects. </td>
 <td align="center"> </td>
