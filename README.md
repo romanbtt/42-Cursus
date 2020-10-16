@@ -3,7 +3,7 @@
   
 <th align="center">
 <img width="147">
-<p>  Project  </p>
+<p>      Project      </p>
 </th>
 
 <th align="center">
