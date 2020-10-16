@@ -33,7 +33,7 @@
 </tr>
   
 <tr>
-<td align="center"> <a href="https://github.com/romanbtt/42_cursus/tree/main/libft"> <img width=125px src="Images/libft.png"><a/> </td>
+<td align="center"> <a href="https://github.com/romanbtt/42_cursus/tree/main/libft"> <img src="Images/libft.png"><a/> </td>
 <td align="center"> <a href=https://en.wikipedia.org/wiki/C_(programming_language)><img width=40px src="Images/c.png"><a/></td>
 <td align="center"> <a href=#><img width=40px src="Images/1.png"><a/></td>
 <td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-fr.pdf"> <img width=30px src="Images/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-en.pdf"><img width=30px src="Images/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-es.pdf"><img width=30px src="Images/es.png"><a/> </td>
