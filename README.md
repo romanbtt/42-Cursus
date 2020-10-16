@@ -23,7 +23,7 @@
   
 <th align="center">
 <img width="147">
-<p>Object</p>
+<p>Description</p>
 </th>
   
 <th align="center">
