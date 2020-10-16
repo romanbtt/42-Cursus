@@ -24,7 +24,7 @@
   
 <tr>
 <td align="center"> <a href="https://github.com/romanbtt/42_cursus/tree/main/libft"> <img src="Images/libft.png"><a/> </td>
-<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-fr.pdf"> <img width=30px src="Images/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-en.pdf"><img width=30px src="Images/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-es.pdf"><img width=30px src="Images/es.png"><a/> </td>
+<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-fr.pdf"> <img width=30px src="Images/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft-en.pdf"><img width=30px src="Images/us.png"><a/> <a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/libft-es.pdf"><img width=30px src="Images/es.png"><a/> </td>
 <td align="center">This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus. </td>
 <td align="center"> <a href=#><img src="Images/115score.png"> <a/></td>
 </tr>
