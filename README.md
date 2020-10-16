@@ -24,7 +24,7 @@
   
 <tr>
 <td align="center"> <img src="Images/libft.png"></td>
-<td align="center"> <img width=40px src="Images/fr.png"> <img width=40px src="Images/us.png"> </td>
+<td align="center"> <img width=30px src="Images/fr.png"> <img width=30px src="Images/us.png"> </td>
 <td align="center">This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus. </td>
 <td align="center"> <img src="Images/115score.png"> </td>
 </tr>
