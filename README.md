@@ -3,7 +3,7 @@
   
 <th align="center">
 <img width="220.5">
-<p>    -Project's- name</p>
+<p>----Project----</p>
 </th>
 
 <th align="center">
