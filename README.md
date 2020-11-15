@@ -41,14 +41,14 @@
 <td align="center"> <a href=https://github.com/romanbtt/42_cursus/tree/main/get_next_line><img src="Images/get_next_line.png"><a/></td>
 <td align="center"> <a href=https://en.wikipedia.org/wiki/C_(programming_language)><img width=40px src="Images/c.png"><a/></td>
 <td align="center"> <a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/get_next_line-fr.pdf"><img width=30px src="Images/fr.png"> <a/><a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/get_next_line-en.pdf"><img width=30px src="Images/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/get_next_line-es.pdf"><img width=30px src="Images/es.png"><a/> </td>
-<td align="center">May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects. </td>
+<td align="center">May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects.</td>
 </tr>
  
 <tr>
 <td align="center"> <a href=https://github.com/romanbtt/42_cursus/tree/main/get_next_line><img src="Images/ft_printf.png"><a/></td>
 <td align="center"> <a href=https://en.wikipedia.org/wiki/C_(programming_language)><img width=40px src="Images/c.png"><a/></td>
-<td align="center"> <a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/get_next_line-fr.pdf"><img width=30px src="Images/fr.png"> <a/><a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/get_next_line-en.pdf"><img width=30px src="Images/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/get_next_line-es.pdf"><img width=30px src="Images/es.png"><a/> </td>
-<td align="center">May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects. </td>
+<td align="center"> <a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/ft_printf-fr.pdf"><img width=30px src="Images/fr.png"> <a/><a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/ft_printf-en.pdf"><img width=30px src="Images/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf-es.pdf"><img width=30px src="Images/es.png"><a/> </td>
+<td align="center">This project is pretty straight forward. You will recode printf. You will then be allowed to reuse the function in your future projects. You will mainly learn how to use variadic arguments.</td>
 </tr>
 
 </table>
