@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 10:35:32 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 16:25:28 by robitett         ###   ########.fr       */
+/*   Created: 2020/11/15 16:16:04 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/15 16:16:05 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

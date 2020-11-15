@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/01 00:02:43 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 16:26:20 by robitett         ###   ########.fr       */
+/*   Created: 2020/11/15 16:16:43 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/15 16:16:44 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

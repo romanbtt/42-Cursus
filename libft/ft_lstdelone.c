@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 10:14:35 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 16:25:30 by robitett         ###   ########.fr       */
+/*   Created: 2020/11/15 16:16:07 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/15 16:16:07 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

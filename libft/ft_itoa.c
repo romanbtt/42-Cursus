@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/29 23:46:19 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 16:25:18 by robitett         ###   ########.fr       */
+/*   Created: 2020/11/15 16:15:56 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/15 16:15:57 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_countsize(int n)
 {

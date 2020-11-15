@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Marvin <Marvin@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/03 14:08:12 by Marvin            #+#    #+#             */
-/*   Updated: 2020/10/20 18:14:16 by Marvin           ###   ########.fr       */
+/*   Created: 2020/11/15 16:19:15 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/15 16:19:16 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+
+include "get_next_line.h"
 
 /*
 ** is_feedline return 1 if a feedline char is founded in the string parameter

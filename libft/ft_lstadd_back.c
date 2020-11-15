@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robitett <robitett@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/01 22:35:09 by robitett          #+#    #+#             */
-/*   Updated: 2020/10/02 17:53:34 by robitett         ###   ########.fr       */
+/*   Created: 2020/11/15 16:15:59 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/15 16:15:59 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
