@@ -2,12 +2,12 @@
 <tr>
   
 <th align="center">
-<img width="220.5">
+<img width="320.5">
 <p>Project</p>
 </th>
 
 <th align="center">
-<img width="220.5">
+<img width="120.5">
 <p>Language</p>
 </th>
  
