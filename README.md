@@ -2,7 +2,7 @@
 <tr>
   
 <th align="center">
-<img width="320.5">
+<img width="420.5">
 <p>Project</p>
 </th>
 
@@ -12,7 +12,7 @@
 </th>
  
 <th align="center">
-<img width="220.5">
+<img width="120.5">
 <p>Subject</p>
 </th>
   
