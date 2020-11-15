@@ -33,7 +33,7 @@
 <tr>
 <td align="center"> <a href=#><img src="Images/projects/netwhat.png"><a/></td>
 <td align="center"> <a href=https://en.wikipedia.org/wiki/Multiple_choice><img width=40px src="Images/languages/mcq.png"><a/></td>
-<td align="center"> <a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/netwhat/netwhat-fr.pdf"><img width=30px src="Images/flags/fr.png"> <a/><a href="https://github.com/romanbtt/42_cursus/blob/main/PDFs/netwhat/netwhat-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/netwhat/netwhat-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
+<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/netwhat/netwhat-fr.pdf"><img width=30px src="Images/flags/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/netwhat/netwhat-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/netwhat/netwhat-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
 <td align="center">Netwhat will allow you to discover the network and to understand how it works. This will allow you to understand how some things you already use in your everyday life, without even knowing it. For that you will answer a questionnaire on the website netwhat.42.fr. If you unregister this project, you will need to wait three days before you can retry the subject. </td>
 </tr>
   
