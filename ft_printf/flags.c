@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:32 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 10:02:19 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/16 17:54:33 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,26 @@
 
 void	flag_digit(const char *format, t_flags *x)
 {
-	x->width = 0;
 	while (ft_isdigit(format[x->idx]))
 	{
-		x->width = (x->width * 10) + (format[x->idx] - 48);
+		if (x->dot)
+		{
+			x->precision = (x->precision * 10) + (format[x->idx] - 48);
+		}	
+		else
+			x->width = (x->width * 10) + (format[x->idx] - 48);
 		x->idx++;
 	}
 	x->idx--;
+	if (format)
+			return ;
 }
 
 void	flag_dot(const char *format, t_flags *x)
 {
-	x->idx++;
-	if (format[x->idx] == '*')
-	{
-		x->precision = va_arg(x->args, int);
-		x->idx++;
-	}
-	else
-	{
-		x->precision = 0;
-		while (ft_isdigit(format[x->idx]))
-		{
-			x->precision = (x->precision * 10) + (format[x->idx] - 48);
-			x->idx++;
-		}
-		x->idx--;
-	}
+		x->dot = 1;
+		if (format)
+			return ;
 }
 
 void	flag_zero(const char *format, t_flags *x)
@@ -51,27 +44,24 @@ void	flag_zero(const char *format, t_flags *x)
 
 void	flag_wildcard(const char *format, t_flags *x)
 {
-	x->width = va_arg(x->args, int);
-	x->wildcard = 1;
+	if (x->dot)
+		x->precision = va_arg(x->args, int);
+	else
+		x->width = va_arg(x->args, int);
 	if (x->width < 0)
 	{
 		x->minus = -x->width;
 		x->zero = 0;
 		x->width = 0;
 	}
+	if (format)
+		return ;
 }
 
 void	flag_minus(const char *format, t_flags *x)
 {
-	x->minus = 0;
+	x->minus = 1;
 	x->zero = 0;
-	x->idx++;
-	while (ft_isdigit(format[x->idx]))
-	{
-		x->minus = (x->minus * 10) + (format[x->idx] - 48);
-		x->idx++;
-	}
-	x->idx--;
+	if (format)
+		return ;
 }
-
-

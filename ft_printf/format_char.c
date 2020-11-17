@@ -6,13 +6,13 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:38 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 10:02:18 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/16 17:23:16 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void format_char(t_flags *x)
+void	format_char(t_flags *x)
 {
 	char c;
 
@@ -21,5 +21,5 @@ void format_char(t_flags *x)
 		padding(x->width, 1, x);
 	ft_putchar_fd(c, 1);
 	if (x->minus)
-		padding(x->minus, 1, x);
+		padding(x->width, 1, x);
 }

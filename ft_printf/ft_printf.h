@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:02:05 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 10:02:17 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/16 17:43:46 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,17 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdbool.h>
 
 //Structure
 typedef struct	s_flags
 {
+
 	int		idx;
 	int		count;
+	bool	dot;
 	int		zero;
-	int		minus;
-	int		wildcard;
+	bool	minus;
 	int		width;
 	int		precision;
 	va_list	args;

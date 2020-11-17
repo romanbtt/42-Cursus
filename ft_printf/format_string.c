@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:43 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 10:02:18 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 08:35:51 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,33 @@
 
 void format_string(t_flags *x)
 {
-	/*
 	char *str;
 
 	str = va_arg(x->args, char*);
-	if (x->precision > ft_strlen(str))
-		x->precision = ft_strlen(str);
-	if (x->minus == 1)
+	if (!str)
+		str = "(null)";
+	if (x->dot && x->precision > (int)ft_strlen(str))
+		x->precision = (int)ft_strlen(str);
+	if (x->dot && !x->precision)
+		x->precision = 0;
+	if (!x->minus)
+	{
+		if (x->dot)
+			padding(x->width, x->precision, x);
+		else
+			padding(x->width, (int)ft_strlen(str), x);
+	}
+	if (x->dot)
+		print(str, x->precision, x);
+	else
 		print(str, ft_strlen(str), x);
-	if ()
-	*/
+	if (x->minus)
+	{
+		if (x->dot)
+			padding(x->width, x->precision, x);
+		else
+			padding(x->width, (int)ft_strlen(str), x);
+	}
+		
 }
 
