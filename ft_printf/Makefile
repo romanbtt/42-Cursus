@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 CFLAGS =  -I. -c
 
-SRC = flags.c format_char.c format_string.c formats.c ft_printf_utils.c ft_printf.c print.c
+SRC = flags.c format_char.c format_string.c format_pointer.c formats.c ft_printf_utils.c ft_printf.c print.c
 
 
 OBJ = $(SRC:.c=.o)
