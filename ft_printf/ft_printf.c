@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:58 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 08:47:49 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 10:12:21 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,8 @@ int		ft_printf(const char *format, ...)
 	return (x.count);
 }
 
-/*
+
 int main(void)
 {
 	ft_printf("%.03s", NULL);
 }
-*/

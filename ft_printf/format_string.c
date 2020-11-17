@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:43 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 08:35:51 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 10:14:02 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void format_string(t_flags *x)
 	str = va_arg(x->args, char*);
 	if (!str)
 		str = "(null)";
-	if (x->dot && x->precision > (int)ft_strlen(str))
+	if (x->dot && x->precision > (int)ft_strlen(str) || x->precision < 0)
 		x->precision = (int)ft_strlen(str);
 	if (x->dot && !x->precision)
 		x->precision = 0;
@@ -41,6 +41,5 @@ void format_string(t_flags *x)
 		else
 			padding(x->width, (int)ft_strlen(str), x);
 	}
-		
 }
 
