@@ -1,42 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   formats.c                                          :+:      :+:    :+:   */
+/*   format_pointer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 10:01:47 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 11:45:32 by romanbtt         ###   ########.fr       */
+/*   Created: 2020/11/17 11:39:12 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/17 11:45:36 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void format_int(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_unsigned_int(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_low_hex(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_up_hex(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_percent(t_flags *x)
+void format_pointer(t_flags *x)
 {
 	if (x->idx)
 		return;

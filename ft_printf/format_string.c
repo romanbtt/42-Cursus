@@ -6,13 +6,13 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:43 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 10:14:02 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 11:45:02 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void format_string(t_flags *x)
+void	format_string(t_flags *x)
 {
 	char *str;
 
@@ -23,23 +23,16 @@ void format_string(t_flags *x)
 		x->precision = (int)ft_strlen(str);
 	if (x->dot && !x->precision)
 		x->precision = 0;
-	if (!x->minus)
-	{
-		if (x->dot)
-			padding(x->width, x->precision, x);
-		else
-			padding(x->width, (int)ft_strlen(str), x);
-	}
+	if (!x->minus && x->dot)
+		padding(x->width, x->precision, x);
+	else
+		padding(x->width, (int)ft_strlen(str), x);
 	if (x->dot)
 		print(str, x->precision, x);
 	else
 		print(str, ft_strlen(str), x);
-	if (x->minus)
-	{
-		if (x->dot)
-			padding(x->width, x->precision, x);
-		else
-			padding(x->width, (int)ft_strlen(str), x);
-	}
+	if (x->minus && x->dot)
+		padding(x->width, x->precision, x);
+	else
+		padding(x->width, (int)ft_strlen(str), x);
 }
-
