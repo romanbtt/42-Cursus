@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:43 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 12:00:16 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 12:05:37 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	format_string(t_flags *x)
 		str = "(null)";
 	if ((x->dot && x->precision > (int)ft_strlen(str)) || x->precision < 0)
 		x->precision = (int)ft_strlen(str);
-	if (x->dot && !x->precision)
+	else if (x->dot && !x->precision)
 		x->precision = 0;
 	if (!x->minus && x->dot)
 		padding(x->width, x->precision, x);
