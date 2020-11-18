@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:39:12 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/18 08:24:55 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/18 08:27:31 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void format_pointer(t_flags *x)
 {
 	char *str;
 	int i;
+	int test_github_desktop;
 
 	i = 0;
 	str = ullitoa_base(va_arg(x->args, unsigned long long int), 16);
