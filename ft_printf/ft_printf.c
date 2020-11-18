@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:58 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 11:45:59 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 19:55:08 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,32 @@ int		ft_printf(const char *format, ...)
 	va_end(x.args);
 	return (x.count);
 }
-
 /*
+
 int main(void)
 {
-	ft_printf("%.03s", NULL);
+	void *a01;
+	void *a02;
+	void *a03;
+	void *a04;
+	void *a05;
+	void *a06;
+	void *a07;
+	void *a08;
+	void *a09;
+	void *a10;
+	void *a11;
+	void *a12;
+
+	int a;
+	int b;
+	a = ft_printf("%p%p%p%p%p%p%p%p%p%p%p%p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
+	printf("\n");
+	b = printf("%p%p%p%p%p%p%p%p%p%p%p%p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
+	printf("\n");
+	printf("%d", a);
+	printf("\n");
+	printf("%d", b);
 }
+
 */

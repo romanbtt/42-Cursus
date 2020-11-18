@@ -6,13 +6,65 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:52 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 10:02:17 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 19:32:07 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
+}
 
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*ptr;
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (!s1 || !s2 || !(ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+		return (NULL);
+	while (s1[i])
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+		ptr[i++] = s2[j++];
+	ptr[i] = '\0';
+	return (ptr);
+}
+
+char	*ullitoa_base(unsigned long long int nb, int base)
+{
+	unsigned long long int tmp;
+	int size;
+	char *str;
+
+	tmp = nb;
+	size = 0;
+	if (nb == 0)
+		return (ft_strdup("0"));
+	while (nb /= base)
+		size++;
+	if (!(str = malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	str[size] = '\0';
+	while (tmp > 0)
+	{
+		if ((tmp % base) < 10)
+			str[size--] = (tmp % base) + 48;
+		else
+			str[size--] = (tmp % base) + 55;
+		tmp /= base;
+	}
+	return (str);
+}
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

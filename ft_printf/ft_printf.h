@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:02:05 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 17:43:46 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/17 19:32:16 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ int		ft_printf(const char *format, ...);
 void 	padding(int width, int lenght, t_flags *x);
 void 	print(char *str, int size, t_flags *x);
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int	ft_tolower(int c);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ullitoa_base(unsigned long long int nb, int base);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
