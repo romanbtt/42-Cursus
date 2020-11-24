@@ -6,11 +6,39 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:52 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 19:32:07 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/22 20:58:21 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_uintlen(unsigned int nb, int base)
+{
+	size_t	len;
+
+	len = 1;
+	while ((nb /= base) > 0)
+		len++;
+	return (len);
+}
+
+int	ft_intlen(int nb, int base)
+{
+	size_t	len;
+	unsigned int nb_u;
+
+	len = 1;
+	if (nb < 0)
+	{
+		nb_u = -nb;
+		len = 2;
+	}
+	else
+		nb_u = nb;
+	while ((nb_u /= base) > 0)
+		len++;
+	return (len);
+}
 
 int	ft_tolower(int c)
 {

@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   formats.c                                          :+:      :+:    :+:   */
+/*   format_percent.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 10:01:47 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 11:45:32 by romanbtt         ###   ########.fr       */
+/*   Created: 2020/11/18 11:26:13 by romanbtt          #+#    #+#             */
+/*   Updated: 2020/11/23 20:49:40 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void format_int(t_flags *x)
+void	format_percent(t_flags *x)
 {
-	if (x->idx)
-		return;
-}
-
-void format_unsigned_int(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_low_hex(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_up_hex(t_flags *x)
-{
-	if (x->idx)
-		return;
-}
-
-void format_percent(t_flags *x)
-{
-	if (x->idx)
-		return;
+	if (x->zero)
+		x->count += padding(x->width, 1, true);
+	else if (!x->minus)
+		x->count += padding(x->width, 1, false);
+	ft_putchar_fd('%', 1);
+	x->count++;
+	if (x->minus)
+		x->count += padding(x->width, 1, false);
 }

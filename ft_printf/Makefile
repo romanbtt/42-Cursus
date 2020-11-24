@@ -1,7 +1,9 @@
 NAME = libftprintf.a
 CFLAGS =  -I. -c
 
-SRC = flags.c format_char.c format_string.c format_pointer.c formats.c ft_printf_utils.c ft_printf.c print.c
+SRC = flags.c format_char.c format_string.c format_pointer.c \
+	format_int.c format_unsigned_int.c format_percent.c format_hex.c \
+	ft_printf_utils.c ft_printf.c print.c 
 
 
 OBJ = $(SRC:.c=.o)
@@ -15,10 +17,6 @@ $(NAME): $(OBJ)
 $(OBJ): $(SRC)
 	gcc $(CFLAGS) -c $(SRC)
 
-
-#so:
-#	gcc -fPIC -Wall -Werror -Wextra -c libft.h $(SRC) $(SRC_BONUS)
-#	gcc -shared  -o libft.so $(OBJ) $(OBJ_BONUS)
 
 clean:
 	/bin/rm -f $(OBJ)

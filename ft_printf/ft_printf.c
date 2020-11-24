@@ -6,11 +6,13 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:58 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 21:35:15 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/23 20:52:39 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#define STR_CONV "cspdiuxX%"
+#define STR_FLAG "0*.-"
 
 void	select_conversion(const char *format, t_flags *x)
 {
@@ -20,7 +22,7 @@ void	select_conversion(const char *format, t_flags *x)
 		format_pointer, format_int, format_int, format_unsigned_int,
 		format_low_hex, format_up_hex, format_percent};
 
-	conversions = "cspdiuxX%";
+	conversions = STR_CONV;
 	i = 0;
 	while (format[x->idx] != conversions[i])
 		i++;
@@ -35,19 +37,24 @@ void	parsing_format(const char *format, t_flags *x)
 		flag_dot, flag_minus};
 
 	i = -1;
-	flags = "0*.-";
-	while (format[++x->idx] && !ft_strchr("cspdiuxX%", format[x->idx]))
+	flags = STR_FLAG;
+	while (format[++x->idx] && !ft_strchr(STR_CONV, format[x->idx]))
 	{
 		while (flags[++i])
 		{
 			if (flags[i] == format[x->idx])
 				(*func_flags[i])(format, x);
 		}
+		if (!ft_strchr(STR_FLAG, format[x->idx]) && !ft_isdigit(format[x->idx]))
+		{
+			ft_putchar_fd(format[x->idx], 1);
+			x->count++;
+		}
 		i = 0;
 		if (ft_isdigit(format[x->idx]))
 			flag_digit(format, x);
 	}
-	if (ft_strchr("cspdiuxX%", format[x->idx]))
+	if (ft_strchr(STR_CONV, format[x->idx]))
 		select_conversion(format, x);
 }
 
@@ -55,7 +62,7 @@ int		ft_printf(const char *format, ...)
 {
 	t_flags x;
 
-	x = (t_flags) {0, 0, 0, 0, 0, 0, 0, {{0}}};
+	x = (t_flags) {0};
 	va_start(x.args, format);
 	while (format[x.idx])
 	{
@@ -76,32 +83,3 @@ int		ft_printf(const char *format, ...)
 	va_end(x.args);
 	return (x.count);
 }
-/*
-
-int main(void)
-{
-	void *a01;
-	void *a02;
-	void *a03;
-	void *a04;
-	void *a05;
-	void *a06;
-	void *a07;
-	void *a08;
-	void *a09;
-	void *a10;
-	void *a11;
-	void *a12;
-
-	int a;
-	int b;
-	a = ft_printf("%p%p%p%p%p%p%p%p%p%p%p%p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
-	printf("\n");
-	b = printf("%p%p%p%p%p%p%p%p%p%p%p%p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
-	printf("\n");
-	printf("%d", a);
-	printf("\n");
-	printf("%d", b);
-}
-
-*/

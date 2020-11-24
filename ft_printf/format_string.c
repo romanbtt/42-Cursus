@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:43 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/17 12:07:16 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/19 13:50:56 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ void	format_string(t_flags *x)
 	else if (x->dot && !x->precision)
 		x->precision = 0;
 	if (!x->minus && x->dot)
-		padding(x->width, x->precision, x);
+		x->count += padding(x->width, x->precision, false);
 	else if (!x->minus)
-		padding(x->width, (int)ft_strlen(str), x);
+		x->count += padding(x->width, (int)ft_strlen(str), false);
 	if (x->dot)
 		print(str, x->precision, x);
 	else
 		print(str, ft_strlen(str), x);
 	if (x->minus && x->dot)
-		padding(x->width, x->precision, x);
+		x->count += padding(x->width, x->precision, false);
 	else if (x->minus)
-		padding(x->width, (int)ft_strlen(str), x);
+		x->count += padding(x->width, (int)ft_strlen(str), false);
 }

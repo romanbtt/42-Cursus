@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:38 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/16 17:23:16 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/23 18:55:56 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ void	format_char(t_flags *x)
 
 	c = va_arg(x->args, int);
 	if (!x->minus)
-		padding(x->width, 1, x);
+		x->count += padding(x->width, 1, false);
 	ft_putchar_fd(c, 1);
+	x->count++;
 	if (x->minus)
-		padding(x->width, 1, x);
+		x->count += padding(x->width, 1, false);
 }
