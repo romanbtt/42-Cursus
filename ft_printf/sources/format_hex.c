@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 21:33:42 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/24 16:50:08 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/24 18:22:01 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void		format_up_hex(t_flags *x)
 	{
 		print_space_left(x, length);
 		print_zero_left(x, length);
-		poutputrint(ullitoa_base(nb, 16), length, x);
+		output(ullitoa_base(nb, 16), length, x);
 		print_space_right(x, length);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 10:01:58 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/24 16:55:17 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/11/24 18:32:45 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	select_conversion(const char *format, t_flags *x)
 	(*func_conv[i])(x);
 }
 
-void	parsing_format(const char *format, t_flags *x)
+void	parsing_format(char *format, t_flags *x)
 {
 	const char					*flags;
 	int							i;
@@ -58,20 +58,22 @@ void	parsing_format(const char *format, t_flags *x)
 int		ft_printf(const char *format, ...)
 {
 	t_flags x;
+	char *str;
 
+	str = ft_strdup(format);
 	x = (t_flags) {0};
 	va_start(x.args, format);
-	while (format[x.idx])
+	while (str[x.idx])
 	{
-		if (format[x.idx] == '%')
+		if (str[x.idx] == '%')
 		{
-			parsing_format(format, &x);
+			parsing_format(str, &x);
 			x = (t_flags) {x.idx, x.count, 0, 0, 0, 0, 0,
 				{{x.args->gp_offset, x.args->fp_offset,
 				x.args->overflow_arg_area, x.args->reg_save_area}}};
 		}
 		else
-			output(format + x.idx, 1, x);
+			output(str + x.idx, 1, &x);
 		x.idx++;
 	}
 	va_end(x.args);
