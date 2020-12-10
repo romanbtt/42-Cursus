@@ -59,10 +59,10 @@
 </tr>
   
   <tr>
-<td align="center"> <a href=https://github.com/romanbtt/42_cursus/tree/main/ft_printf><img src="Images/projects/ft_printf.png"><a/></td>
+<td align="center"> <a href=https://github.com/romanbtt/42_cursus/tree/main/cub3d><img src="Images/projects/cub3d.png"><a/></td>
 <td align="center"><img width=40px src="Images/languages/c.png"><a/></td>
-<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-fr.pdf"><img width=30px src="Images/flags/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
-<td align="center">This project is pretty straight forward. You will recode printf. You will then be allowed to reuse the function in your future projects. You will mainly learn how to use variadic arguments.</td>
+<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/cub3d/cub3d-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/cub3d/cub3d-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/cub3d/cub3d-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
+<td align="center">This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever. It will enable you to explore ray-casting. Your goal will be to make a dynamic view inside a maze, in which you'll have to find your way. .</td>
 </tr>
 
 </table>
