@@ -50,5 +50,19 @@
 <td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-fr.pdf"><img width=30px src="Images/flags/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
 <td align="center">This project is pretty straight forward. You will recode printf. You will then be allowed to reuse the function in your future projects. You will mainly learn how to use variadic arguments.</td>
 </tr>
+  
+  <tr>
+<td align="center"> <a href=https://github.com/romanbtt/42_cursus/tree/main/ft_printf><img src="Images/projects/ft_printf.png"><a/></td>
+<td align="center"><img width=40px src="Images/languages/c.png"><a/></td>
+<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-fr.pdf"><img width=30px src="Images/flags/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
+<td align="center">This project is pretty straight forward. You will recode printf. You will then be allowed to reuse the function in your future projects. You will mainly learn how to use variadic arguments.</td>
+</tr>
+  
+  <tr>
+<td align="center"> <a href=https://github.com/romanbtt/42_cursus/tree/main/ft_printf><img src="Images/projects/ft_printf.png"><a/></td>
+<td align="center"><img width=40px src="Images/languages/c.png"><a/></td>
+<td align="center"> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-fr.pdf"><img width=30px src="Images/flags/fr.png"> <a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-en.pdf"><img width=30px src="Images/flags/us.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_printf/ft_printf-es.pdf"><img width=30px src="Images/flags/es.png"><a/> </td>
+<td align="center">This project is pretty straight forward. You will recode printf. You will then be allowed to reuse the function in your future projects. You will mainly learn how to use variadic arguments.</td>
+</tr>
 
 </table>
