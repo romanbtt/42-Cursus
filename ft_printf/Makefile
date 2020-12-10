@@ -6,12 +6,13 @@
 #    By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 21:34:55 by romanbtt          #+#    #+#              #
-#    Updated: 2020/11/24 15:18:23 by romanbtt         ###   ########.fr        #
+#    Updated: 2020/11/27 09:42:34 by romanbtt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAG = -Wall -Wextra -Werror
 INC_DIR = includes
+INC_LIBFT_DIR = libft/includes
 SRC_DIR = sources
 LIBFT_DIR = libft
 
@@ -42,7 +43,7 @@ $(NAME): $(OBJS)
 	@echo "$(NAME) created"
 
 %.o: %.c
-	@gcc $(FLAG) -I $(INC_DIR) -c $< -o $@
+	@gcc $(FLAG) -I $(INC_DIR) -I $(INC_LIBFT_DIR) -c $< -o $@
 	@echo "$@ created from $<"
 
 clean:

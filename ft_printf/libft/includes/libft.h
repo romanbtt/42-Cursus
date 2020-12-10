@@ -24,7 +24,7 @@ typedef struct	s_list
 
 int				ft_intlen(int nb, int base);
 int				ft_uintlen(unsigned int nb, int base);
-char			*ullitoa_base(unsigned long long int nb, int base);
+char			*ft_ullitoa_base(unsigned long long int nb, int base);
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
