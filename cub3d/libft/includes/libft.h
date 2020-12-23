@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 16:17:38 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/11/24 12:34:03 by romanbtt         ###   ########.fr       */
+/*   Updated: 2020/12/19 19:46:23 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct	s_list
 
 int				ft_intlen(int nb, int base);
 int				ft_uintlen(unsigned int nb, int base);
-char			*ft_ullitoa_base(unsigned long long int nb, int base);
+char			*ullitoa_base(unsigned long long int nb, int base);
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -40,6 +40,7 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+void            ft_strdel(char **s);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -69,4 +70,9 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+void			*ft_realloc(void *ptr, size_t size);
+char			**ft_split_isspace(char const *s);
+int				ft_isspace(const char c);
+void			ft_delchar(char *str, char set);
+void			ft_delspace(char *str);
 #endif

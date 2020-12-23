@@ -10,7 +10,17 @@ LIBFT_DIR = libft
 
 INCLUDES = -I./includes -I./$(MLX_DIR) -I./$(LIBFT_DIR)/includes
 
-SRC_FILES =	main.c 
+SRC_FILES =	main.c \
+			read_file.c \
+			get_next_line.c \
+			get_data_file.c \
+			get_identifier_1.c \
+			get_identifier_2.c \
+			cub3d_utils.c \
+			is_valid_map.c \
+			trigger_keys.c \
+			update.c \
+			draw_shapes.c
 
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES))
 
@@ -24,7 +34,8 @@ $(NAME): $(OBJS)
 	@clang $(OBJS) $(INCLUDES) $(FLAGS_WWW) $(FLAGS_LIBS) -o $(NAME)
 
 %.o: %.c
-	@clang -Wall -Wextra -Werror $(INCLUDES) -c $< -o $@
+	# -w -g to remove !!!!!!!!!
+	@clang -w -g -Wall -Wextra -Werror $(INCLUDES) -c $< -o $@
 	@echo "$@ created from $<"
 
 clean:
