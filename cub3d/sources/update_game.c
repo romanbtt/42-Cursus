@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   update_game.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/15 16:15:30 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/12/19 10:39:28 by romanbtt         ###   ########.fr       */
+/*   Created: 2021/01/22 17:04:31 by romanbtt          #+#    #+#             */
+/*   Updated: 2021/01/25 16:24:46 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub3d.h"
 
-int			ft_atoi(const char *nptr)
+int		update_game(t_struct *cub)
 {
-	int neg;
-	int nb;
-
-	neg = 1;
-	nb = 0;
-	while (ft_isspace(*nptr))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
-	{
-		if (*nptr == '-')
-			neg = -1;
-		nptr++;
-	}
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		nb = (*nptr - '0') + (nb * 10);
-		nptr++;
-	}
-	return (nb * neg);
+	move_player(&cub->map, &cub->player);
+	raycasting(cub);
+	render_projection(cub);
+	render_sprites(cub);
+	mlx_put_image_to_window(cub->mlx, cub->win, cub->img.img, 0, 0);
+	mlx_do_sync(cub->mlx);
+	return (0);
 }

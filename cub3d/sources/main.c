@@ -5,34 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/17 14:33:16 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/12/23 16:50:34 by romanbtt         ###   ########.fr       */
+/*   Created: 2021/01/22 13:23:48 by romanbtt          #+#    #+#             */
+/*   Updated: 2021/01/25 15:36:23 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int		initialize_window(t_struct *cub3d, int argc)
-{
-	int screen_width;
-	int screen_heigth;
-
-	if (!(cub3d->mlx = mlx_init()))
-		exit_faillure("Error initializing MLX.\n");
-	mlx_get_screen_size(cub3d->mlx, &screen_width, &screen_heigth);
-	if (cub3d->map.resWH[0] > screen_width)
-		cub3d->map.resWH[0] = screen_width;
-	if (cub3d->map.resWH[1] > screen_heigth)
-		cub3d->map.resWH[1] = screen_heigth;
-	if (argc == 2)
-	{
-		cub3d->win = mlx_new_window(cub3d->mlx, cub3d->map.resWH[0], cub3d->map.resWH[1],
-			"CUB3D - robitett");
-	}
-	
-}
-
-void	check_arguments(int argc, char **argv)
+static void	check_arguments(int argc, char **argv)
 {
 	if (argc < 2 || argc > 3)
 		exit_faillure("Invalid number of arguments.\n");
@@ -45,17 +25,60 @@ void	check_arguments(int argc, char **argv)
 		exit_faillure("Invalid second argument.\n");
 }
 
-int		main(int argc, char **argv)
+static void	check_resolution(t_struct *cub)
 {
-	t_struct cub3d;
+	int screen_width;
+	int screen_height;
 
-	cub3d = (t_struct) {0};
+	mlx_get_screen_size(cub->mlx, &screen_width, &screen_height);
+	if (cub->map.width > screen_width)
+		cub->map.width = screen_width;
+	if (cub->map.height > screen_height)
+		cub->map.height = screen_height;
+}
+
+static void	initialisation_game(t_struct *cub)
+{
+	if (!(cub->mlx = mlx_init()))
+		exit_faillure("Could't etablish a connection with mlx");
+	check_resolution(cub);
+	if (!(cub->img.img = mlx_new_image(cub->mlx, cub->map.width,
+		cub->map.height)))
+		exit_faillure("Could't create an image with mlx.");
+	cub->img.addr = mlx_get_data_addr(cub->img.img, &cub->img.bpp, &cub->img.line_length, &cub->img.endian);
+	if (!(cub->win = mlx_new_window(cub->mlx, cub->map.width, cub->map.height,
+		TITLE_WIN)))
+		exit_faillure("Could't create a window with mlx.");
+}
+
+static void	setup_game(t_struct *cub)
+{
+	cub->map.tile_size = 32;
+	if (!(cub->sprites = malloc(sizeof(t_pos) * cub->map.sp_qty)))
+		exit_faillure("Malloc failled to allocate 'sp->pos'");
+	if (!(cub->ray = malloc(sizeof(t_ray) * cub->map.width)))
+		exit_faillure("Malloc failed to allocate 'cub->ray'");
+	get_texture(cub);
+	get_info_sprites(cub);
+
+	cub->player.pos.x *= cub->map.tile_size;
+	cub->player.pos.y *= cub->map.tile_size;
+	cub->player.rot_speed = 0.1;
+	cub->player.walk_speed = 3;
+	
+
+}
+
+int	main(int argc, char **argv)
+{
+	t_struct cub;
+	
+	cub = (t_struct) {0};
 	check_arguments(argc, argv);
-	read_file(argv[1], &cub3d);
-	initialize_window(&cub3d, argc);
-	mlx_hook(cub3d.win, 2, (1l << 0), trigger_keys, &cub3d);
-	mlx_hook(cub3d.win, 3, (1L << 1), release_keys, &cub3d);
-	mlx_hook(cub3d.win, 17, (1l << 17), exit_success, &cub3d);
-	mlx_loop_hook(cub3d.mlx, update, &cub3d);
-	mlx_loop(cub3d.mlx);
+	process_map_file(&cub, argv[1]);
+	initialisation_game(&cub);
+	setup_game(&cub);
+	mlx_loop_hook(cub.mlx, update_game, &cub);
+	key_event(&cub);
+	mlx_loop(cub.mlx);
 }

@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   exit_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/15 16:15:30 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/12/19 10:39:28 by romanbtt         ###   ########.fr       */
+/*   Created: 2021/01/23 23:20:19 by romanbtt          #+#    #+#             */
+/*   Updated: 2021/01/25 15:20:18 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "cub3d.h"
 
-int			ft_atoi(const char *nptr)
+void	exit_faillure(char *error)
 {
-	int neg;
-	int nb;
+	ft_putstr_fd(error, 2);
+	exit(EXIT_FAILURE);
+}
 
-	neg = 1;
-	nb = 0;
-	while (ft_isspace(*nptr))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
-	{
-		if (*nptr == '-')
-			neg = -1;
-		nptr++;
-	}
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		nb = (*nptr - '0') + (nb * 10);
-		nptr++;
-	}
-	return (nb * neg);
+int	exit_game(void)
+{
+	exit(EXIT_SUCCESS);
+	return (42);
 }

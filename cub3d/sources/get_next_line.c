@@ -6,11 +6,12 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 16:18:46 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/12/23 16:50:31 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/25 15:20:11 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
 #define OPEN_MAX 1024
 #define BUFFER_SIZE 128
 

@@ -11,16 +11,26 @@ LIBFT_DIR = libft
 INCLUDES = -I./includes -I./$(MLX_DIR) -I./$(LIBFT_DIR)/includes
 
 SRC_FILES =	main.c \
-			read_file.c \
+			process_map_file.c \
+			get_textures.c \
 			get_next_line.c \
-			get_data_file.c \
-			get_identifier_1.c \
-			get_identifier_2.c \
-			cub3d_utils.c \
-			is_valid_map.c \
-			trigger_keys.c \
-			update.c \
-			draw_shapes.c
+			get_map_identifier_1.c \
+			get_map_identifier_2.c \
+			cub_utils.c \
+			get_line_map.c \
+			is_map_valid.c \
+			move_player.c \
+			update_game.c  \
+			key_events.c \
+			get_info_player.c \
+			get_info_sprites.c \
+			raycasting.c \
+			raycasting_horz.c \
+			render_projection_1.c \
+			render_projection_2.c \
+			exit_game.c \
+			raycasting_vert.c \
+			render_sprites.c
 
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES))
 

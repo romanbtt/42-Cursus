@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/15 16:15:30 by romanbtt          #+#    #+#             */
-/*   Updated: 2020/12/19 10:39:28 by romanbtt         ###   ########.fr       */
+/*   Created: 2021/01/18 18:03:34 by romanbtt          #+#    #+#             */
+/*   Updated: 2021/01/18 18:06:08 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *nptr)
+void ft_swap(void *a, void *b, size_t len)
 {
-	int neg;
-	int nb;
-
-	neg = 1;
-	nb = 0;
-	while (ft_isspace(*nptr))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	size_t i;
+    unsigned char	*p;
+	unsigned char	*q;
+	unsigned char	tmp;
+	
+	i = 0;
+	*p = a;
+	*q = b;
+	while (i != len)
 	{
-		if (*nptr == '-')
-			neg = -1;
-		nptr++;
+		tmp = p[i];
+        p[i] = q[i];
+        q[i] = tmp;
+		i++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		nb = (*nptr - '0') + (nb * 10);
-		nptr++;
-	}
-	return (nb * neg);
 }

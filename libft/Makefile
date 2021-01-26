@@ -6,7 +6,7 @@
 #    By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/24 15:19:33 by romanbtt          #+#    #+#              #
-#    Updated: 2020/11/24 15:19:46 by romanbtt         ###   ########.fr        #
+#    Updated: 2020/12/19 10:41:21 by romanbtt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,11 @@ SRC_FILES =	ft_memset.c \
 			ft_lstmap.c \
 			ft_uintlen.c \
 			ft_intlen.c \
-			ft_ullitoa.c
+			ft_ullitoa.c \
+            ft_strdel.c \
+			ft_realloc.c \
+			ft_split_isspace.c \
+			ft_isspace.c
 
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES))
 
