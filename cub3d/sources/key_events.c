@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 16:42:38 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 15:20:08 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/27 10:26:59 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 static	int trigger_keys(int keycode, t_struct *cub)
 {
 	if (keycode == ESC)
-		exit_game(); // TO DO
+		exit_game(cub); // TO DO
 	if (keycode == RIGHT_ARROW)
 		cub->player.turn_direction = 1;
 	if (keycode == LEFT_ARROW)

@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 15:25:06 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 15:20:17 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/27 10:31:57 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@ static void		get_player_angle(t_player *pl , char angle)
 		pl->rot_angle = WEST;
 }
 
-void			get_info_player(t_map *map, t_player *pl, int row, int col)
+void			get_info_player(t_struct *cub, t_player *pl, int row, int col)
 {
-	if (ft_strchr("NSWE", map->map_2d[row][col]))
+	if (ft_strchr("NSWE", cub->map.map_2d[row][col]))
 	{
 		if (!pl->pos.x)
 		{
 			pl->pos.x = col + 0.5;
 			pl->pos.y = row + 0.5;
-			get_player_angle(pl, map->map_2d[row][col]);
+			get_player_angle(pl, cub->map.map_2d[row][col]);
 		}
 		else
-			exit_faillure("Player position is set more than once..\n");
+			exit_faillure(cub, "Player position is set more than once..\n");
 	}
 }

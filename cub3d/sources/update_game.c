@@ -6,13 +6,13 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:04:31 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 16:24:46 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/27 21:15:17 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int		update_game(t_struct *cub)
+int	update_game(t_struct *cub)
 {
 	move_player(&cub->map, &cub->player);
 	raycasting(cub);

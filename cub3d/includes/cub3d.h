@@ -16,8 +16,7 @@
 # include <limits.h>
 # include <float.h>
 
-
-# define PI 3.14159265
+# define PI 3.1415926535f
 # define FOV (60 * (PI / 180))
 # define TITLE_WIN "Cub3D of Robitett - Learning Purpose"
 
@@ -28,12 +27,11 @@ typedef struct		s_pos
 
 }					t_pos;
 
-
 typedef struct		s_sprites
 {
 	float			dir;
-	float				pl_dist;
-	int			size;
+	float			pl_dist;
+	int				size;
 	int				offset_x;
 	int				offset_y;
 	float			pos_x;
@@ -71,9 +69,6 @@ typedef struct		s_helper_ray
 	bool			hit;
 }					t_helper_ray;
 
-
-
-
 typedef	struct 		s_img
 {
 	void			*img;
@@ -93,6 +88,7 @@ typedef	struct 		s_texture
 	t_img			ea;
 	t_img			we;
 	t_img			curr;
+	int				size[8];
 }					t_texture;
 
 typedef struct		s_map
@@ -106,11 +102,11 @@ typedef struct		s_map
 	char			*text_we;
 	char			*text_ea;
 	char			*text_sp;
-	unsigned int	row_len;
+	int				row_len;
 	char			*map_1d;
 	char			**map_2d;
 	int				count_id;
-	unsigned int	col_len;
+	int				col_len;
 	int				tile_size;
 	float			scalemap;
 	int				sp_qty;
@@ -141,6 +137,11 @@ typedef struct		s_ray
 	bool			isray_right;
 }					t_ray;
 
+typedef struct		s_bmp
+{
+	unsigned char	buff_header[54];
+	int 			*buff_body;
+}					t_bmp;
 
 typedef struct		s_struct
 {
@@ -152,26 +153,18 @@ typedef struct		s_struct
 	t_ray			*ray;
 	t_sprites		*sprites;
 	t_texture		text;
+	t_bmp			bmp;
 }					t_struct;
 
-typedef void	(*t_array_func_id)(char *, t_map *);
-
-static void		setup_game(t_struct *cub);
-static void		check_resolution(t_struct *cub);
-static void		initialisation_game(t_struct *cub);
+typedef void	(*t_array_func_id)(t_struct * , t_map *, char *);
 
 void			process_map_file(t_struct *cub, char *file);
-static bool		is_empty_line(char *line);
-static bool		is_map_identifier(char c);
-static bool		is_line_map(char *line);
-static bool		is_missing_identifier(t_map map, char *line);
 
-void			is_map_valid(t_map *map, t_sprites *sp, t_player *pl);
-static void		check_sides_map(t_map *map, int row, int col, int curr_col_len);
-static bool		is_char_allowed(char c);
 
-void			exit_faillure(char *error);
-int				exit_game(void);
+void			is_map_valid(t_struct *cub, t_map *map, t_player *pl);
+
+void			exit_faillure(t_struct *cub, char *error);
+int				exit_game(t_struct *cub);
 
 void			insert_pixel(t_img *img, int x, int y, int color);
 int				pick_pixel(t_img *img, int x, int y);
@@ -179,57 +172,50 @@ float			normalize_angle(float angle);
 bool			is_wall_at(t_map *map, int x, int y);
 float			dist_btw_pts(float x1, float x2, float y1, float y2);
 
-void			get_info_player(t_map *map, t_player *pl, int row, int col);
-static void		get_player_angle(t_player *pl , char angle);
+void			get_info_player(t_struct *cub, t_player *pl, int row, int col);
 
 void			get_info_sprites(t_struct *cub);
 
-void			get_line_map(t_map *map, char *line);
+void			get_line_map(t_struct *cub, char *line);
 
-void			get_map_identifier(t_map *map, char *line);
-void			identifier_w(char *line, t_map *map);
-void			identifier_e(char *line, t_map *map);
-void			identifier_so(char *line, t_map *map);
-void			identifier_n(char *line, t_map *map);
-void			identifier_s_so(char *line, t_map *map);
-void			identifier_r(char *line, t_map *map);
-void			identifier_c(char *line, t_map *map);
-void			identifier_f(char *line, t_map *map);
-static void		put_in_rgb(char **array, int rgb[3]);
+void			get_map_identifier(t_struct *cub, char *line);
+void			identifier_w(t_struct *cub, t_map *map, char *line);
+void			identifier_e(t_struct *cub, t_map *map, char *line);
+void			identifier_so(t_struct *cub, t_map *map, char *line);
+void			identifier_n(t_struct *cub, t_map *map, char *line);
+void			identifier_s_so(t_struct *cub, t_map *map, char *line);
+void			identifier_r(t_struct *cub, t_map *map, char *line);
+void			identifier_c(t_struct *cub, t_map *map, char *line);
+void			identifier_f(t_struct *cub, t_map *map, char *line);
 
 int				get_next_line(int fd, char **line);
-static int		return_value(char **remainder, char **line, int ret, int fd);
-static int		process_line(char **remainder, char **line);
 
 void 			get_texture(t_struct *cub);
-static void		get_data_addr(t_texture *text);
-static void		check_path_text(t_texture *text);
+
 
 void			key_event(t_struct *cub);
-static int		release_keys(int keycode, t_struct *cub);
-static int 		trigger_keys(int keycode, t_struct *cub);
 
 void			move_player(t_map *map, t_player *pl);
-static bool		is_collision_at(t_map *map, float x, float y);
+
 
 void			raycasting(t_struct *cub);
-static void		casting_ray(t_map *map, t_ray *ray, t_player *pl);
-static void		select_shortest(t_ray *ray, t_helper_ray *horz,
-					t_helper_ray *vert);
+
 void			vertical_casting(t_map *map, t_ray *ray, t_helper_ray *vert,
 					t_player *pl);
-static void 	increment_vert(t_map *map, t_ray *ray, t_helper_ray *vert);
 void			horizontal_casting(t_map *map, t_ray *ray, t_helper_ray *horz,
 					t_player *pl);
 void 			increment_horz(t_map *map, t_ray *ray, t_helper_ray *horz);
 
 void			render_projection(t_struct *cub);
-static void		calc_wall_height(t_struct *cub, t_wall *wall, int col);
-static void		select_texture(t_texture *text, t_ray *ray);
+
 void			print_floor(t_struct *cub, t_wall *wall, int col);
 void			print_ceiling(t_struct *cub, t_wall *wall, int col);
 void			print_wall(t_struct *cub, t_wall *wall, int col);
 
 int				update_game(t_struct *cub);
+
+void			save_bmp(t_struct *cub);
+
+void			render_sprites(t_struct *cub);
 
 #endif

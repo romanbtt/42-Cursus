@@ -30,7 +30,8 @@ SRC_FILES =	main.c \
 			render_projection_2.c \
 			exit_game.c \
 			raycasting_vert.c \
-			render_sprites.c
+			render_sprites.c \
+			save_bmp.c
 
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES))
 
@@ -45,7 +46,7 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	# -w -g to remove !!!!!!!!!
-	@clang -w -g -Wall -Wextra -Werror $(INCLUDES) -c $< -o $@
+	@clang -g $(FLAGS_WWW) $(INCLUDES) -c $< -o $@
 	@echo "$@ created from $<"
 
 clean:

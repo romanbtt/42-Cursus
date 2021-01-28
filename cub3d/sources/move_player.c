@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:09:06 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 16:21:17 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/27 21:12:52 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static bool		is_collision_at(t_map *map, float x, float y)
 	int chk_x;
 	int chk_y;
 
-	if (x < 0 || x > map->width || y < 0 || y > map->height)
-		return (true);
+//	if (x < 0 || x > map->width || y < 0 || y > map->height)
+//		return (true);
 	chk_x = floor(x / map->tile_size);
 	chk_y = floor(y / map->tile_size);
 	if (chk_y >= map->row_len || chk_x >= (int)ft_strlen(map->map_2d[chk_y]))
@@ -49,5 +49,5 @@ void	move_player(t_map *map, t_player *pl)
 		!is_collision_at(map, new.x - 2, new.y) && !is_collision_at(map, new.x - 2, new.y - 2) &&
 		!is_collision_at(map, new.x, new.y + 2) && !is_collision_at(map, new.x + 2, new.y) &&
 		!is_collision_at(map, new.x + 2, new.y + 2))
-		pl->pos = new;	
+		pl->pos = new;
 }

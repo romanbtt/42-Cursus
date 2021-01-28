@@ -6,17 +6,20 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 15:22:42 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 15:20:09 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/27 21:25:42 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-#define UP map->map_2d[row - 1][col]
-#define DOWN map->map_2d[row + 1][col]
-#define RIGHT map->map_2d[row][col + 1]
-#define LEFT map->map_2d[row][col - 1]
-//TO DO : ADD UP_LEFT UP_RIGHT DOWN_LEFT DOWN_RIGHT
+#define UP cub->map.map_2d[row - 1][col]
+#define DOWN cub->map.map_2d[row + 1][col]
+#define RIGHT cub->map.map_2d[row][col + 1]
+#define LEFT cub->map.map_2d[row][col - 1]
+#define UP_LEFT cub->map.map_2d[row - 1][col - 1]
+#define DOWN_LEFT cub->map.map_2d[row + 1][col - 1]
+#define UP_RIGHT cub->map.map_2d[row - 1][col + 1]
+#define DOWN_RIGHT cub->map.map_2d[row + 1][col + 1]
 
 static bool		is_char_allowed(char c)
 {
@@ -27,24 +30,26 @@ static bool		is_char_allowed(char c)
 	return (false);
 }
 
-static void check_sides_map(t_map *map, int row, int col, int curr_col_len)
+static void check_sides_map(t_struct *cub, int row, int col, int curr_col_len)
 {
-	if (((row == 0 || row == map->row_len - 1) || (col == 0 ||
-		col == curr_col_len - 1)) && (!(ft_strchr("1 ", map->map_2d[row][col]))))
+	if (((row == 0 || row == cub->map.row_len - 1) || (col == 0 ||
+		col == curr_col_len - 1)) && (!(ft_strchr("1 ", cub->map.map_2d[row][col]))))
 		{
-			exit_faillure("The map is not valid.\n");
+			exit_faillure(cub, "The map is not valid.\n");
 		}
-	else if ((row > 0 && row < map->row_len - 1) &&
+	else if ((row > 0 && row < cub->map.row_len - 1) &&
 		(col > 0 && col < curr_col_len - 1) &&
-		(ft_strchr("02NSWE", map->map_2d[row][col])) &&
+		(ft_strchr("02NSWE", cub->map.map_2d[row][col])) &&
 		((!(is_char_allowed(UP))) || (!(is_char_allowed(DOWN))) ||
-		(!(is_char_allowed(RIGHT))) || (!(is_char_allowed(LEFT)))))
+		(!(is_char_allowed(RIGHT))) || (!(is_char_allowed(LEFT))) ||
+		(!(is_char_allowed(UP_LEFT))) || (!(is_char_allowed(DOWN_LEFT))) ||
+		(!(is_char_allowed(UP_RIGHT))) || (!(is_char_allowed(DOWN_RIGHT)))))
 		{
-			exit_faillure("The map is not valid.\n");
+			exit_faillure(cub, "The map is not valid.\n");
 		}			
 }
 
-void		is_map_valid(t_map *map, t_sprites *sp, t_player *pl)
+void		is_map_valid(t_struct *cub, t_map *map, t_player *pl)
 {
 	int row;
 	int col;
@@ -58,8 +63,8 @@ void		is_map_valid(t_map *map, t_sprites *sp, t_player *pl)
 		curr_col_len = ft_strlen(map->map_2d[row]);
 		while (col < curr_col_len)
 		{
-			check_sides_map(map, row, col, curr_col_len);
-			get_info_player(map, pl, row, col);
+			check_sides_map(cub, row, col, curr_col_len);
+			get_info_player(cub, pl, row, col);
 			if (map->map_2d[row][col] == '2')
 				map->sp_qty++;
 			col++;
@@ -69,6 +74,5 @@ void		is_map_valid(t_map *map, t_sprites *sp, t_player *pl)
 			map->col_len = curr_col_len;
 	}
 	if (!pl->pos.x || !pl->pos.y)
-		exit_faillure("Player position is not set on the map.\n");
-	
+		exit_faillure(cub, "Player position is not set on the map.\n");
 }

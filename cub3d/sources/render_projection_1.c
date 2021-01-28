@@ -6,7 +6,7 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 21:16:01 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 16:53:11 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/27 15:04:02 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,14 @@ static void		select_texture(t_texture *text, t_ray *ray)
 
 static void	calc_wall_height(t_struct *cub, t_wall *wall, int col)
 {
-	float dist_proj_plane;
-
-	dist_proj_plane = (cub->map.width / 2) / tan(FOV / 2); // MOVE IN INIT
 	wall->perp_dist = cub->ray[col].dist * cos(cub->ray[col].ray_angle -
 		cub->player.rot_angle);
 	wall->proj_wall_height = (cub->map.tile_size / wall->perp_dist) *
-		dist_proj_plane;
-//	wall->strp_height = (int)wall->proj_wall_height;//
-	wall->top_strp = (cub->map.height / 2) - (wall->proj_wall_height / 2); // wall->top_strp = (cub->map.height / 2) - (wall->strp_height / 2);
+		wall->dist_proj_plane;
+	wall->top_strp = (cub->map.height / 2) - (int)(wall->proj_wall_height / 2);
 	if (wall->top_strp < 0)
 		wall->top_strp = 0;
-	wall->btm_strp = (cub->map.height / 2) + (wall->proj_wall_height / 2); // wall->btm_strp = (cub->map.height / 2) + (wall->strp_height / 2);
+	wall->btm_strp = (cub->map.height / 2) + (wall->proj_wall_height / 2);
 	if (wall->btm_strp > cub->map.height)
 		wall->btm_strp = cub->map.height;
 }
@@ -48,6 +44,7 @@ void	render_projection(t_struct *cub)
 	t_wall wall;
 
 	col = 0;
+	wall.dist_proj_plane = (cub->map.width / 2) / tan(FOV / 2);
 	while (col < cub->map.width)
 	{
 		calc_wall_height(cub, &wall, col);

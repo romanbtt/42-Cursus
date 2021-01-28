@@ -6,13 +6,11 @@
 /*   By: romanbtt <marvin@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:21:02 by romanbtt          #+#    #+#             */
-/*   Updated: 2021/01/25 16:23:25 by romanbtt         ###   ########.fr       */
+/*   Updated: 2021/01/26 21:29:10 by romanbtt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-
 
 float	dist_btw_pts(float x1, float x2, float y1, float y2)
 {
@@ -46,7 +44,7 @@ float	normalize_angle(float angle)
 	return (angle);
 }
 
-bool		is_wall_at(t_map *map, int x, int y)
+bool	is_wall_at(t_map *map, int x, int y)
 {
 	int	row;
 	int	col;
