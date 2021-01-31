@@ -78,5 +78,12 @@
 <td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_services/ft_services-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_services/ft_services-en.pdf"><img width=30px src="Images/flags/us.png"><a/>
 <td align="center">This project is inspired by the world-famous eponymous 90’s game, which was the first FPS ever. It will enable you to explore ray-casting. The goal is to discover the ray-casting algorithm and allowing to make a dynamic view inside a maze.</td>
 </tr>
+  
+<tr>
+<td align="center"><a href=https://github.com/romanbtt/42-Cub3d><img src="Images/projects/minishell.png"><a/></td>
+<td align="center"><a href=#><img width=40px src="Images/languages/c.png"><a/></td>
+<td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/minishell/minishell-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/minishell/minishell-en.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/minishell/minishell-es.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
+<td align="center">This project is inspired by the world-famous eponymous 90’s game, which was the first FPS ever. It will enable you to explore ray-casting. The goal is to discover the ray-casting algorithm and allowing to make a dynamic view inside a maze.</td>
+</tr
 
 </table>
