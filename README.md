@@ -68,7 +68,7 @@
 <tr>
 <td align="center"><a href=https://github.com/romanbtt/42-Cub3d><img src="Images/projects/libasm.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/asm.png"><a/></td>
-<td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libasm/libasm-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libasm/libasm-en.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libasm/libasm-es.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
+<td align="center"><a href="https://cdn.intra.42.fr/pdf/pdf/13297/fr.subject.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://cdn.intra.42.fr/pdf/pdf/13296/en.subject.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://cdn.intra.42.fr/pdf/pdf/13298/es.subject.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
 <td align="center">The aim of this project is to get familiar with assembly language. </td>
 </tr>
   
