@@ -40,7 +40,7 @@
 <tr>
 <td align="center"><a href=https://github.com/romanbtt/42-Get_Next_Line><img src="Images/projects/get_next_line.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/c.png"><a/></td>
-<td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/get_next_line/get_next_line-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/get_next_line/get_next_line-en.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://cdn.intra.42.fr/pdf/pdf/18780/es.subject.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
+<td align="center"><a href="https://cdn.intra.42.fr/pdf/pdf/18779/fr.subject.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/get_next_line/get_next_line-en.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://cdn.intra.42.fr/pdf/pdf/18780/es.subject.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
 <td align="center">The aim of this project is to make a function that returns a line ending with a newline, read from a file descriptor.</td>
 </tr>
  
