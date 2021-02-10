@@ -61,14 +61,14 @@
   <tr>
 <td align="center"><a href=https://github.com/romanbtt/42-Cub3d><img src="Images/projects/cub3d.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/c.png"><a/></td>
-<td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/cub3d/cub3d-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://cdn.intra.42.fr/pdf/pdf/18800/en.subject.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/cub3d/cub3d-es.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
+<td align="center"><a href="https://cdn.intra.42.fr/pdf/pdf/18805/fr.subject.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://cdn.intra.42.fr/pdf/pdf/18804/en.subject.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://cdn.intra.42.fr/pdf/pdf/18806/es.subject.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
 <td align="center">This project is inspired by the world-famous eponymous 90’s game, which was the first FPS ever. It will enable you to explore ray-casting. The goal is to discover the ray-casting algorithm and allowing to make a dynamic view inside a maze.</td>
 </tr>
   
 <tr>
 <td align="center"><a href=https://github.com/romanbtt/42-Libasm><img src="Images/projects/libasm.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/asm.png"><a/></td>
-<td align="center"><a href="https://cdn.intra.42.fr/pdf/pdf/13297/fr.subject.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://cdn.intra.42.fr/pdf/pdf/13296/en.subject.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://cdn.intra.42.fr/pdf/pdf/13298/es.subject.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
+<td align="center"><a href="https://cdn.intra.42.fr/pdf/pdf/18818/fr.subject.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://cdn.intra.42.fr/pdf/pdf/13296/en.subject.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://cdn.intra.42.fr/pdf/pdf/13298/es.subject.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
 <td align="center">The aim of this project is to get familiar with assembly language. </td>
 </tr>
   
