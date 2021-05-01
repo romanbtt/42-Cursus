@@ -89,7 +89,7 @@
     <tr>
 <td align="center"><a href=#><img src="Images/projects/push_swap.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/c.png"><a/></td>
-<td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_services/ft_services-fr.pdf"><img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/ft_services/ft_services-en.pdf"><img width=30px src="Images/flags/us.png"><a/>
+<a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/push_swap/push_swap-en.pdf"><img width=30px src="Images/flags/us.png"><a/>
 <td align="center">This project involves sorting data on a stack, with a limited set of instructions, and the smallest number of moves.</td>
 </tr>
   
