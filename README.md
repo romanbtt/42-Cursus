@@ -20,7 +20,6 @@
 <p>Description</p>
 </th>
  
-</tr>
   
 <tr>
 <td align="center"><a href="https://github.com/romanbtt/42-Libft"> <img src="Images/projects/libft.png"><a/> </td>
