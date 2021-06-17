@@ -10,11 +10,7 @@
 <p>Language</p>
 </th>
  
-<th align="center">
-<img width="120.5">
-<p>Subject</p>
-</th>
-  
+ 
 <th align="center">
 <img width="220.5">
 <p>Description</p>
@@ -24,7 +20,6 @@
 <tr>
 <td align="center"><a href=#> <img src="Images/projects/libft.png"><a/> </td>
 <td align="center"><a href=#><img width=40px src="Images/languages/c.png"><a/></td>
-<td align="center"><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft/libft-fr.pdf"> <img width=30px src="Images/flags/fr.png"><a/> <a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft/libft-en.pdf"><img width=30px src="Images/flags/us.png"><a/><a href="https://raw.githubusercontent.com/romanbtt/42_cursus/main/PDFs/libft/libft-es.pdf"><img width=30px src="Images/flags/es.png"><a/></td>
 <td align="center">The aim of this project is to code a C library regrouping common functions that are going to be used in other projects.</td>
 </tr>
 
