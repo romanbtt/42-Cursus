@@ -86,7 +86,7 @@
 <tr>
 <td align="center"><a href=#><img src="Images/projects/push_swap.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/cpp.png"><a/></td><a/>
-<td align="center">This project involves sorting data on a stack, with a limited set of instructions, and the smallest number of moves.</td>
+<td align="center">This piscine C++ is about to learn the language and the concepts of Object-oriented programming.</td>
 </tr>
   
 </table>
