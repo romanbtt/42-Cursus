@@ -84,7 +84,7 @@
 </tr>
   
 <tr>
-<td align="center"><a href=#><img src="Images/projects/push_swap.png"><a/></td>
+<td align="center"><a href=#><img src="Images/projects/C++.png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/cpp.png"><a/></td><a/>
 <td align="center">This piscine C++ is about to learn the language and the concepts of Object-oriented programming.</td>
 </tr>
