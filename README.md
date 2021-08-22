@@ -78,7 +78,7 @@
 </tr>
   
  <tr>
-<td align="center"><a href=#><img src="Images/projects/Philosophers.png"><a/></td>
+<td align="center"><a href=#><img src="Images/projects/Philosophers .png"><a/></td>
 <td align="center"><a href=#><img width=40px src="Images/languages/c.png"><a/></td><a/>
 <td align="center">Introduction to multithreading programming with the famous problem of the dinner of the philosophers.</td>
 </tr>
